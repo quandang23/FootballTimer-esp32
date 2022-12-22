@@ -155,30 +155,3 @@ void loop(){
     }
   }
 }
-
-/*
- * void loop() {
-  int input = digitalRead(sensor); 
-  if (stage == 1 && input == 0){  //when crossing is detected. 
-    digitalWrite(redLED, HIGH); 
-    outputData[0] = 1; 
-    pOutputChar->setValue((uint8_t *)outputData, 1);
-    pOutputChar->notify();
-    delay(1000);
-  }
-  else if (stage == 0){   //bluetooth is not established
-    digitalWrite(redLED, LOW); 
-    digitalWrite(greenLED, HIGH); 
-    delay(300); 
-    digitalWrite(greenLED, LOW); 
-    delay(300); 
-  }
-  else if (stage == 1){   //bluetooth is establishedd
-    digitalWrite(greenLED, HIGH);
-  }
-  if (reset == 1){  //reset is clicked
-    digitalWrite(redLED, LOW); 
-    reset = 0; 
-  }
-}
-*/
