@@ -1,11 +1,12 @@
 #include <IRremote.h>
-IRsend irsend; 
-
-void setup() {
-  pinMode(5, OUTPUT); 
-  digitalWrite(5, HIGH); 
+const byte IRPin = 1; 
+void setup()
+{
+  IrSender.begin(IRPin);
+  pinMode(0, OUTPUT); 
+  digitalWrite(0, HIGH);    
 }
-
-void loop() {
-  irsend.sendSony(0xa90, 12); //Sony TV power code
+void loop()
+{
+  IrSender.sendSony(0xa90, 12);
 }
